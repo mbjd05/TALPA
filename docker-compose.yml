@@ -12,4 +12,4 @@ services:
     ports:
       - "443:443"
     volumes:
-    - ..:/workspaces:cached
+      - ..:/workspaces:cached
