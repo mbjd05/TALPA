@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  your_service:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    ports:
+      - "443:443"
+    volumes:
+    - ..:/workspaces:cached
